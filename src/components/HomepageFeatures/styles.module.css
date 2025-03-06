@@ -1,0 +1,28 @@
+.features {
+  display: flex;
+  align-items: center;
+  padding: 2rem 0;
+  width: 100%;
+}
+
+.featureSvg {
+  height: 200px;
+  width: 200px;
+}
+
+.heroImage {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 200px; /* Ajusta el tamaño según necesites */
+  height: auto;
+  z-index: 2;
+}
+
+.heroBanner {
+  position: relative;
+  background: url('/img/LOGO-CSC-FNL.gif') no-repeat center center;
+  background-size: cover;
+}
+
