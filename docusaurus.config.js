@@ -41,7 +41,7 @@ const config = {
       'classic',
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
-        docs: {
+        docs: { 
           sidebarPath: './sidebars.js',
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
@@ -54,6 +54,7 @@ const config = {
             type: ['rss', 'atom'],
             xslt: true,
           },
+
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
@@ -64,8 +65,9 @@ const config = {
           onUntruncatedBlogPosts: 'warn',
         },
         theme: {
-          customCss: './src/css/custom.css',
+          customCss: require.resolve('./src/css/custom.css'),
         },
+        
       }),
     ],
   ],
@@ -87,7 +89,8 @@ const config = {
             type: 'docSidebar',
             sidebarId: 'tutorialSidebar',
             position: 'left',
-            label: 'Base de Datos',
+            label: 'Documentación',
+            className: 'nav-docs-label',
           },
           {to: '/blog', label: 'Blog', position: 'left'},
           {

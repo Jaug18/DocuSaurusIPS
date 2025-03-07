@@ -15,13 +15,11 @@ const PatientForm = () => {
   });
   const [editing, setEditing] = useState(false);
 
-  // Cargar datos desde LocalStorage
   useEffect(() => {
     const storedPatients = JSON.parse(localStorage.getItem('patients')) || [];
     setPatients(storedPatients);
   }, []);
 
-  // Guardar en LocalStorage
   useEffect(() => {
     localStorage.setItem('patients', JSON.stringify(patients));
   }, [patients]);
@@ -32,8 +30,6 @@ const PatientForm = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-
-    // Validación básica
     if (!form.firstName || !form.lastName || !form.age || !form.phone) {
       alert('Por favor, completa los campos obligatorios.');
       return;
@@ -69,10 +65,9 @@ const PatientForm = () => {
   };
 
   return (
-    <div style={{ maxWidth: '800px', margin: '0 auto', padding: '20px' }}>
-      <h2 style={{ textAlign: 'center' }}>Gestión de Pacientes</h2>
-
-      <form onSubmit={handleSubmit} style={{ display: 'grid', gap: '10px', marginBottom: '20px' }}>
+    <div className="container">
+      <h2>Gestión de Pacientes</h2>
+      <form onSubmit={handleSubmit} className="form-grid">
         <input type="text" name="firstName" value={form.firstName} onChange={handleChange} placeholder="Nombre *" required />
         <input type="text" name="lastName" value={form.lastName} onChange={handleChange} placeholder="Apellido *" required />
         <input type="number" name="age" value={form.age} onChange={handleChange} placeholder="Edad *" required min="0" />
@@ -91,13 +86,12 @@ const PatientForm = () => {
           <option value="En tratamiento">En tratamiento</option>
           <option value="Crítico">Crítico</option>
         </select>
-
-        <button type="submit" style={{ padding: '10px', background: editing ? '#ffa500' : '#28a745', color: 'white', border: 'none', cursor: 'pointer' }}>
+        <button type="submit" className={editing ? 'btn-edit' : 'btn-add'}>
           {editing ? 'Actualizar Paciente' : 'Agregar Paciente'}
         </button>
       </form>
 
-      <table border="1" style={{ width: '100%', textAlign: 'left' }}>
+      <table className="patients-table">
         <thead>
           <tr>
             <th>Nombre</th>
@@ -123,13 +117,56 @@ const PatientForm = () => {
               <td>{p.address}</td>
               <td>{p.healthStatus}</td>
               <td>
-                <button onClick={() => handleEdit(p)} style={{ background: '#ffc107', border: 'none', padding: '5px', marginRight: '5px' }}>✏️</button>
-                <button onClick={() => handleDelete(p.id)} style={{ background: '#dc3545', border: 'none', padding: '5px' }}>🗑️</button>
+                <button onClick={() => handleEdit(p)} className="btn-edit">✏️</button>
+                <button onClick={() => handleDelete(p.id)} className="btn-delete">🗑️</button>
               </td>
             </tr>
           ))}
         </tbody>
       </table>
+
+      <style>{`
+        .container {
+          max-width: 900px;
+          margin: auto;
+          padding: 20px;
+          font-family: 'Roboto', sans-serif;
+        }
+        h2 {
+          text-align: center;
+        }
+        .form-grid {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          gap: 10px;
+          margin-bottom: 20px;
+        }
+        .form-grid input, .form-grid select {
+          padding: 8px;
+          font-size: 16px;
+          border: 1px solid #ccc;
+          border-radius: 5px;
+        }
+        .btn-add {
+          grid-column: span 2;
+          padding: 10px;
+          background: #28a745;
+          color: white;
+          border: none;
+          cursor: pointer;
+          border-radius: 5px;
+        }
+        .btn-edit { background: #ffa500; }
+        .btn-delete { background: #dc3545; }
+        .patients-table {
+          width: 100%;
+          border-collapse: collapse;
+        }
+        .patients-table th, .patients-table td {
+          border: 1px solid #ddd;
+          padding: 8px;
+        }
+      `}</style>
     </div>
   );
 };

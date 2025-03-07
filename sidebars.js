@@ -13,17 +13,17 @@ module.exports = {
       items: [
         {
           type: 'doc',
-          id: 'area-tics-telecomunicaciones/infraestructura-redes/100-days-of-oss',
+          id: 'area-tics-telecomunicaciones/infraestructura-redes/seccion1.1',
           label: 'Infraestructura y Redes',
         },
         {
           type: 'doc',
-          id: 'area-tics-telecomunicaciones/seguridad-informatica/hacktoberfest',
+          id: 'area-tics-telecomunicaciones/seguridad-informatica/seccion1.2',
           label: 'Seguridad Informática',
         },
         {
           type: 'doc',
-          id: 'area-tics-telecomunicaciones/soporte-tecnico-helpdesk/welcome-to-the-community',
+          id: 'area-tics-telecomunicaciones/soporte-tecnico-helpdesk/seccion1.3',
           label: 'Soporte Técnico y Helpdesk',
         },
       ],
