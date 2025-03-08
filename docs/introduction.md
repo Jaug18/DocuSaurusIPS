@@ -21,7 +21,7 @@ Somos una institución prestadora de servicios de salud, de atención domiciliar
 
 Nuestra misiòn es:
 
-- [**Integer rutrum diam**](./introduction.md): Aliquam eget pharetra quam. Maecenas sed maximus arcu. Ut hendrerit condimentum erat, a malesuada augue ultrices sed. Vivamus eu ullamcorper turpis, a tristique nisl. Phasellus ultrices.
+- [**Integer rutrum diam**](/pacientes): Aliquam eget pharetra quam. Maecenas sed maximus arcu. Ut hendrerit condimentum erat, a malesuada augue ultrices sed. Vivamus eu ullamcorper turpis, a tristique nisl. Phasellus ultrices.
 - [**ultricies augue. Maecenas sit am**](./introduction.md): Aliquam eget pharetra quam. Maecenas sed maximus arcu. Ut hendrerit condimentum erat, a malesuada augue ultrices sed. Vivamus eu ullamcorper turpis, a tristique nisl. Phasellus ultrices.
 - [**Donec volutpat turpis**](./introduction.md): Aliquam eget pharetra quam. Maecenas sed maximus arcu. Ut hendrerit condimentum erat, a malesuada augue ultrices sed. Vivamus eu ullamcorper turpis, a tristique nisl. Phasellus ultrices.
 - [**Ut rhoncus maximus pharetra**](./introduction.md): Aliquam eget pharetra quam. Maecenas sed maximus arcu. Ut hendrerit condimentum erat, a malesuada augue ultrices sed. Vivamus eu ullamcorper turpis, a tristique nisl. Phasellus ultrices.
