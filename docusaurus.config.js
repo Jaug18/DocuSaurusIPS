@@ -6,6 +6,7 @@
 
 import {themes as prismThemes} from 'prism-react-renderer';
 
+
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
 /** @type {import('@docusaurus/types').Config} */
@@ -179,6 +180,21 @@ const config = {
         darkTheme: prismThemes.dracula,
       },
     }),
+    plugins: [
+      [
+        require.resolve("@easyops-cn/docusaurus-search-local"),
+        {
+          hashed: true,
+          indexDocs: true,
+          indexPages: true,
+          highlightSearchTermsOnTargetPage: true,
+          docsRouteBasePath: "/",
+          searchResultLimits: 10, // Opcional: número de resultados mostrados
+          explicitSearchResultPath: true, // Habilita la búsqueda en modo desarrollo
+        },
+      ],
+    ],
+    
 };
 
 export default config;
