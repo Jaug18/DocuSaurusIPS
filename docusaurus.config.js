@@ -11,7 +11,7 @@ import {themes as prismThemes} from 'prism-react-renderer';
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'IPS CUIDADO SEGURO EN CASA',
+  title: ' ',
   tagline: '',
   favicon: 'img/favicon.ico',
 
@@ -20,7 +20,6 @@ const config = {
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: '/',
-
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
   organizationName: 'Jaug18', // Usually your GitHub org/user name.
@@ -33,8 +32,8 @@ const config = {
   // useful metadata like html lang. For example, if your site is Chinese, you
   // may want to replace "en" with "zh-Hans".
   i18n: {
-    defaultLocale: 'en',
-    locales: ['en'],
+    defaultLocale: 'es',
+    locales: ['es'],
   },
 
   presets: [
@@ -78,12 +77,17 @@ const config = {
     ({
       // Replace with your project's social card
       image: 'img/docusaurus-social-card.jpg',
+      colorMode: {
+        defaultMode: 'light', // Modo predeterminado
+        disableSwitch: false, // Permite a los usuarios cambiar el modo
+        respectPrefersColorScheme: true, // Usa la preferencia del sistema
+      },
       navbar: {
         title: `IPS CUIDADO
          SEGURO EN CASA`,
         logo: {
           alt: 'My Site Logo',
-          src: 'img/logo.svg',
+          src: 'img/LOGO-CSC-FNL.gif',
         },
         items: [
           {

@@ -9,7 +9,7 @@ const FeatureList = [
         Ubicación
       </a>
     ),
-    imgSrc: require('@site/static/img/12761770.gif').default,
+    imgSrc: require('@site/static/img/ubicacion.png').default,
     description: (
       <>
         La IPS está ubicada en el Barrio Armenia, en la dirección Kra 49 #30 - 104. Esta ubicación permite un fácil acceso para los pacientes y colaboradores, brindando servicios de salud en una zona estratégica de la ciudad. 🚑📍
@@ -22,7 +22,7 @@ const FeatureList = [
         Atención al Cliente
       </a>
     ),
-    imgSrc: require('@site/static/img/17576960.gif').default,
+    imgSrc: require('@site/static/img/aac.png').default,
     description: (
       <>
         El área de Atención al Cliente en la IPS se encarga de brindar información, gestionar solicitudes y garantizar una experiencia de calidad para los pacientes. Su objetivo es ofrecer un servicio eficiente, resolviendo dudas y mejorando la satisfacción de los usuarios. 📞🤝
@@ -35,7 +35,7 @@ const FeatureList = [
         Boletin Informativo
       </a>
     ),
-    imgSrc: require('@site/static/img/15748286.gif').default,
+    imgSrc: require('@site/static/img/noticias.png').default,
     description: (
       <>
         El Boletín Informativo de la IPS ofrece noticias, actualizaciones y comunicados importantes sobre servicios, salud y eventos. Mantente al día con la información relevante para tu bienestar y el de la comunidad. 📰📢

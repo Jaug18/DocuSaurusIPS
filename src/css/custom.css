@@ -5,7 +5,7 @@
  */
 
 /* You can override the default Infima variables here. */
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Quicksand:wght@300..700&display=swap');
 
 :root {
   --ifm-color-primary:rgb(36, 52, 143);
@@ -16,15 +16,235 @@
   --ifm-color-primary-lighter: #359962;
   --ifm-color-primary-lightest: #3cad6e;
   --ifm-code-font-size: 95%;
-  --ifm-font-family-base: 'Roboto', sans-serif;
+  --ifm-font-family-base: 'Quicksand', sans-serif;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos específicos para el modo oscuro */
+html[data-theme='dark'] {
+  --ifm-color-primary: rgb(36, 52, 143);
+  --ifm-background-color: #121212;
+  --ifm-navbar-background-color: #1e1e1e;
+  --ifm-footer-background-color: #1e1e1e;
+  --ifm-color-text: #ffffff;
+}
+
+/* Ajustar colores de enlaces en modo oscuro */
+html[data-theme='dark'] a {
+  color: rgb(255, 255, 255);
+}
+
+/* Enlaces del menú en modo oscuro */
+html[data-theme='dark'] .menu__link {
+  color: white; /* Cambia el color de los enlaces no seleccionados */
+}
+
+.hero__title {
+  font-weight: 600; /* Reducir peso */
+  letter-spacing: 1px; /* Añadir espaciado */
+}
+
+.navbar__logo img {
+  height: 10px; /* Ajusta la altura del logo */
+  width: auto; /* Mantiene la proporción */
+  max-height: 10px; /* Evita que sea demasiado grande */
+}
+
+.navbar__logo {
+  padding: 0; /* Elimina el padding extra */
+  margin: 0 0 0 0; /* Reduce el espacio derecho del logo */
+  display: flex;
+  align-items: center; /* Asegura que esté alineado verticalmente */
+}
+
+
+/* Cambia el color cuando el enlace está activo o en hover */
+html[data-theme='dark'] .menu__link:hover,
+html[data-theme='dark'] .menu__link--active {
+  color: rgb(36, 52, 143); /* Mismo color que ya tienes configurado */
 }
 
 
 
+.navbar__title {
+  font-weight: normal; 
+}
+
+.navbar {
+  font-size: 1.1rem; 
+}
+
+.navbar__item {
+  font-weight: normal; 
+}
+
+.navbar__link--active {
+  font-weight: bold; 
+}
+
+.navbar__logo img {
+  height: 60px; /* Ajusta el tamaño del logo */
+  width: auto; /* Mantiene la proporción */
+  max-height: 100px; /* Asegura que no crezca más de este tamaño */
+}
+
+.navbar__logo {
+  display: flex;
+  align-items: center; /* Centra el logo verticalmente */
+}
+
+/* 
+   ====== TIPOGRAFÍA GENERAL ======
+   Modifica los tamaños de los encabezados, párrafos y listas
+*/
+
+h1 {
+  font-size: 2.5rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.75rem;
+}
+
+h4 {
+  font-size: 1.5rem;
+}
+
+h5 {
+  font-size: 1.25rem;
+}
+
+h6 {
+  font-size: 1.1rem;
+}
+
+p, .markdown p {
+  font-size: 1.1rem;
+}
+
+.markdown ul, .markdown ol {
+  font-size: 1rem;
+}
+
+/* 
+   ====== NAVBAR (BARRA DE NAVEGACIÓN) ======
+   Modifica la barra superior donde aparecen las opciones del menú principal
+*/
+
+.navbar {
+  font-size: 1.1rem;
+}
+
+.navbar__title {
+  font-size: 1.1rem;
+}
+
+.navbar__item, .navbar__link {
+  font-size: 1.1rem;
+}
+
+/* 
+   ====== SIDEBAR (MENÚ LATERAL) ======
+   Ajusta los tamaños de las secciones del menú de navegación lateral
+*/
 
 
-.nav-docs-label {
-  font-size: 1.2rem; /* Ajusta el tamaño según sea necesario */
+.menu__link {
+  font-size: 1rem;
+}
+
+.menu__link--active {
   font-weight: bold;
+  font-size: 1.1rem;
+}
+
+/* 
+   ====== FOOTER (PIE DE PÁGINA) ======
+   Personaliza los tamaños de los textos en el footer del sitio web
+*/
+
+.footer {
+  font-size: 1rem;
+}
+
+.footer__title {
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+.footer__item, .footer__link {
+  font-size: 1rem;
+}
+
+/* 
+   ====== TABLA DE CONTENIDOS (TOC) ======
+   Controla el tamaño de la lista de enlaces de la tabla de contenidos
+*/
+
+.table-of-contents {
+  font-size: 1rem;
+}
+
+.table-of-contents__link {
+  font-size: 1rem;
+}
+
+.table-of-contents__link--active {
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+/* 
+   ====== BLOG (PÁGINA DEL BLOG) ======
+   Ajusta los títulos y textos en la sección del blog
+*/
+
+.blog-list-page {
+  font-size: 1rem;
+}
+
+.blog-post-title {
+  font-size: 2rem;
+}
+
+.blog-post-subtitle {
+  font-size: 1.5rem;
+}
+
+.blog-post-content {
+  font-size: 1.1rem;
+}
+
+/* 
+   ====== CÓDIGO Y BLOQUES DE RESALTADO ======
+   Personaliza el tamaño del texto en fragmentos de código
+*/
+
+code {
+  font-size: 0.95rem;
+}
+
+pre {
+  font-size: 1rem;
+}
+
+pre code {
+  font-size: 1rem;
+}
+
+/* 
+   ====== BOTONES Y ENLACES ======
+   Modifica el tamaño de los botones y los enlaces generales
+*/
+
+.button, .button--primary, .button--secondary {
+  font-size: 1rem;
+}
+
+a {
+  font-size: 1rem;
 }
